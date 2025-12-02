@@ -1,1 +1,108 @@
-// ваш код
+.header {
+    height: 70px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+  }
+  &__logo {
+    width: 341px;
+    height: 100%;
+    margin-left: 74px;
+    padding-top: 18px;
+    img {
+      min-width: 212px;
+      height: 30px;
+    }
+
+  }
+  &__list {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #14b86e;
+    }
+  }
+  &__nav {
+    @include tablet {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      top: 70px;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: calc(100vh - 70px);
+      background: #fff;
+      transition: right 0.4s ease;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+
+      &.menu--active {
+        right: 0;
+      }
+
+      .header__list {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+    }
+  }
+
+    &__nav{
+      display: flex;
+      align-items: center;
+
+    }
+
+    &__nav li {
+      margin-left: 28px
+
+    }
+
+    &__nav button {
+      border-radius: 36px;
+      border-color: #14b86e;
+      background-color: white;
+      color: #14b86e;
+      border-style: solid;
+      margin-left: 54px;
+      margin-right: 48px;
+      padding-left: 72px;
+      padding-bottom: 20px;
+      padding-right: 72px;
+      padding-top: 20px;
+      transition: 0.3s ease-in-out 0.3s;
+
+      &:hover {
+        color:white;
+        cursor: pointer;
+        background-color: #14b86e;
+
+      }
+    }
+
+
+  .burger {
+    @include burger;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+}
+
