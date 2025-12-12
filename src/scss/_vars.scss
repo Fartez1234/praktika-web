@@ -3,7 +3,7 @@
 :root {
   // base
   --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --content-width: 1440px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -12,7 +12,7 @@
 }
 
 // ========== ЦВЕТА ==========
-$primary-color: #ff6b35;
+$primary-color: #14b86e;
 $primary-hover: darken($primary-color, 10%);
 $dark-color: #2d2d2d;
 $light-color: #f8f9fa;
